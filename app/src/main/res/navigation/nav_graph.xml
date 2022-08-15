@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.example.test_7.fragment.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_fragment_home_to_shopDetailFragmentHome"
+            app:destination="@id/shopDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_menu"
+        android:name="com.example.test_7.fragment.menu.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_fragment_menu_to_shopDetailProduct"
+            app:destination="@id/shopDetailProduct" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_cart"
+        android:name="com.example.test_7.fragment.cart.CartFragment"
+        tools:lable="Cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="com.example.test_7.fragment.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/shopDetailFragment"
+        android:name="com.example.test_7.fragment.details.ShopDetailFragment"
+        android:label="ShopDetailFragmentHome"
+        tools:layout="@layout/fragment_shop_detail_home">
+        <argument
+            android:name="newModel"
+            app:argType="com.example.test_7.model.NewModel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopDetailProduct"
+        android:name="com.example.test_7.fragment.details.ShopDetailProductFragment"
+        tools:lable="ShopDetailProduct"
+        tools:layout="@layout/fragment_shop_detail_product">
+        <action
+            android:id="@+id/action_shopProductFragment_to_shopDetailFragment"
+            app:destination="@id/shopDetailFragment" />
+        <argument
+            android:name="newModelMenu"
+            app:argType="com.example.test_7.model.NewModelMenu" />
+    </fragment>
+
+
+</navigation>

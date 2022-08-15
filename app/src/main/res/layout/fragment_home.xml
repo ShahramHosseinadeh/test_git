@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_home_fragment_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/ic_menu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/josefinsans_light"
+                    android:text="New collection"
+                    android:textColor="#a1a1a1"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_home_fragment_search" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="@string/discount_text"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_fragment_home_new" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_fragment_home_first_img"
+                    android:layout_width="350dp"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#defe71"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_discount">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pic_home" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_fragment_home_second_tv"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#defe71"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintBottom_toBottomOf="@id/cv_fragment_home_first_img"
+                    app:layout_constraintEnd_toEndOf="@id/cv_fragment_home_first_img"
+                    app:layout_constraintStart_toStartOf="@id/cv_fragment_home_first_img"
+                    app:layout_constraintTop_toBottomOf="@id/cv_fragment_home_first_img">
+
+                    <TextView
+                        android:id="@+id/tv_fragment_home_shop_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:text="Shop now"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Shop By Brand"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cv_fragment_home_second_tv" />
+
+                <HorizontalScrollView
+                    android:id="@+id/hs_fragment_home_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_brand">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_first_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_first_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="ARMANI"
+                                android:textColor="#defe71"
+                                android:textSize="24sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_second_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_second_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="PUMA"
+                                android:textColor="#defe71"
+                                android:textSize="24sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_third_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_third_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="BURBERRY"
+                                android:textColor="#defe71"
+                                android:textSize="20sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_fourth_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_fourth_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text=" HOUSE\n     OF \nVERSACE"
+                                android:textColor="#defe71"
+                                android:textSize="18sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_fifth_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_fifth_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="CHANEL"
+                                android:textColor="#defe71"
+                                android:textSize="24sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_sixth_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_sixth_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="PRADA"
+                                android:textColor="#defe71"
+                                android:textSize="24sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_seventh_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_seventh_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="RALPH\n    LAUREN"
+                                android:textColor="#defe71"
+                                android:textSize="20sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_eighth_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_eighth_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="HERMES"
+                                android:textColor="#defe71"
+                                android:textSize="20sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_ninth_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_ninth_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="NIKE"
+                                android:textColor="#defe71"
+                                android:textSize="24sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_fragment_home_tenth_b"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="12dp"
+                            android:backgroundTint="#1f1f1f"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_fragment_home_tenth_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefinsans_bold"
+                                android:text="FENDI"
+                                android:textColor="#defe71"
+                                android:textSize="24sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Top Sales"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hs_fragment_home_brand" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fragment_home_top_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_top" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fragment_home_top_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_top_woman" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_shopping1"
+                    android:layout_width="0dp"
+                    android:layout_height="320dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shopping_1"
+                    app:layout_constraintEnd_toEndOf="@id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_top_man"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_shopping2"
+                    android:layout_width="0dp"
+                    android:layout_height="320dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shopping_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_top_man"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView2" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Popular Models"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shopping1" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_popular_t_shirt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="T_Shirt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_favorite" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.33" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.67" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping1"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_t_shirt"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_t_shirt_shopping2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping2"
+                    app:layout_constraintEnd_toStartOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_t_shirt"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_t_shirt"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping4"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_t_shirt_shopping5"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping5"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping7"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping8"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_t_shirt_shopping_8"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t_shirt_shopping9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_t_shirt_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:gravity="center"
+                    android:text="See all"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping_8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2.5dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_t_shirt_see_all"
+                    app:layout_constraintStart_toEndOf="@id/tv_fragment_home_t_shirt_see_all"
+                    app:layout_constraintTop_toTopOf="@id/tv_fragment_home_t_shirt_see_all" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_popular_dress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Dress"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_t_shirt_see_all" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping1"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_dress"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_dress_shopping2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping2"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_dress"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_dress"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping4"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_dress_shopping5"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping5"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping7"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_dress_shopping8"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dress_shopping8"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_dress_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:gravity="center"
+                    android:text="See all"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2.5dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_dress_see_all"
+                    app:layout_constraintStart_toEndOf="@id/tv_fragment_home_dress_see_all"
+                    app:layout_constraintTop_toTopOf="@id/tv_fragment_home_dress_see_all" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_popular_pants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Pants"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_dress_see_all" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping1"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_pants"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_pants_shopping2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping2"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_pants"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_pants"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping4"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_pants_shopping5"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping5"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping7"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_pants_shopping8"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping8"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pants_shopping9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_pants_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:gravity="center"
+                    android:text="See all"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2.5dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_pants_see_all"
+                    app:layout_constraintStart_toEndOf="@id/tv_fragment_home_pants_see_all"
+                    app:layout_constraintTop_toTopOf="@id/tv_fragment_home_pants_see_all" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_popular_shoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Shoes"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_pants_see_all" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping1"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_shoes"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_shoes_shopping2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping2"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_shoes"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_shoes"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping4"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_shoes_shopping5"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping5"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping7"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_shoes_shopping8"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping8"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shoe_shopping9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_shoes_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:gravity="center"
+                    android:text="See all"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2.5dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_shoes_see_all"
+                    app:layout_constraintStart_toEndOf="@id/tv_fragment_home_shoes_see_all"
+                    app:layout_constraintTop_toTopOf="@id/tv_fragment_home_shoes_see_all" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_popular_coat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Coats"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_shoes_see_all" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping1"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_coat"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_coat_shopping2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping2"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_coat"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_coat"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping4"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_coat_shopping5"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping5"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping2"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping7"
+                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_fragment_home_coat_shopping8"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping8"
+                    app:layout_constraintEnd_toEndOf="@id/guideline5"
+                    app:layout_constraintStart_toStartOf="@id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coat_shopping9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping5"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_home_coat_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:gravity="center"
+                    android:text="See all"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2.5dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_coat_see_all"
+                    app:layout_constraintStart_toEndOf="@id/tv_fragment_home_coat_see_all"
+                    app:layout_constraintTop_toTopOf="@id/tv_fragment_home_coat_see_all" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#17191A">
+
+    <TextView
+        android:id="@+id/tv_fragment_fifth_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/josefinsans_bold"
+        android:gravity="center"
+        android:text="MAXIMO SHOP"
+        android:textColor="#defe71"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gif_fragment_fifth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_iv_fragment_5"
+        app:layout_constraintBottom_toTopOf="@id/tv_fragment_fifth_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fragment_fifth_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/josefinsans_bold"
+        android:text="Enjoy from shopping :)"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_fifth_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_fragment_fifth_get_started"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#defe71"
+        android:fontFamily="@font/josefinsans_bold"
+        android:text="Get Started.."
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_fifth_description"
+        app:strokeColor="@color/white"
+        app:strokeWidth="5dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
