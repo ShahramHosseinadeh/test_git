@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.test_7.R
-import com.example.test_7.fragment.product.ShopTShirtFragment
 import com.example.test_7.model.DummyData
 import com.example.test_7.model.NewModel
 import com.example.test_7.ui.adapter.ShopListAdapterProduct
@@ -17,30 +18,21 @@ import kotlinx.android.synthetic.main.fragment_shop_detail_home.*
 
 class ShopDetailFragment : Fragment(R.layout.fragment_shop_detail_home), OnClickListener,
     ShopListListener {
+    val navController by lazy { findNavController() }
+
+    val shopDetailFragmentArgs: ShopDetailFragmentArgs by navArgs()
+
     //This is for favorite FULL or EMPTY
     var isFavorite: Boolean = false
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*var btnNavigation : BottomNavigationView? = activity?.btm_navigation
-        btnNavigation?.visibility = GONE*/
+        iv_fragment_detail_product.load(shopDetailFragmentArgs.newModel.imageUrl)
+        tv_fragment_detail_title.text = shopDetailFragmentArgs.newModel.title
+        tv_fragment_detail_price.text = shopDetailFragmentArgs.newModel.price
 
-        iv_fragment_detail_home_product.setImageResource(R.drawable.t_shirt_shopping1)
-
-        iv_fragment_detail_home_product.load(shopDetailItem?.imageUrl)
-        tv_fragment_detail_title.text = shopDetailItem?.title
-        tv_fragment_detail_price_number.text = shopDetailItem?.price
-
-        rv_fragment_detail_one.layoutManager =
-            LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
-        rv_fragment_detail_one.adapter = ShopListAdapterProduct(
-            listItems = DummyData().shopListPants, listener = this@ShopDetailFragment
-        )
-
-        rv_fragment_detail_two.layoutManager =
-            LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
-        rv_fragment_detail_two.adapter = ShopListAdapterProduct(
-            listItems = DummyData().shopListPants2, listener = this@ShopDetailFragment
+        rv_fragment_detail_product.adapter = ShopListAdapterProduct(
+            listItems = DummyData().shopListCoat, this@ShopDetailFragment
         )
 
         //colors
@@ -54,14 +46,14 @@ class ShopDetailFragment : Fragment(R.layout.fragment_shop_detail_home), OnClick
         iv_fragment_detail_back.setOnClickListener(this)
     }
 
-    companion object {
-        var shopDetailItem: NewModel? = null
-        fun getShopDetailFragment(item: NewModel): ShopDetailFragment {
-            shopDetailItem = item
-            return ShopDetailFragment()
-        }
-    }
-
+    /* companion object {
+         var shopDetailItem: NewModel? = null
+         fun getShopDetailFragment(item: NewModel): ShopDetailFragment {
+             shopDetailItem = item
+             return ShopDetailFragment()
+         }
+     }
+ */
     override fun onClick(view: View?) {
         when (view) {
             iv_fragment_detail_black_circle -> {
@@ -103,26 +95,13 @@ class ShopDetailFragment : Fragment(R.layout.fragment_shop_detail_home), OnClick
             }
             iv_fragment_detail_back -> {
                 activity?.onBackPressed()
-                /*val state = arguments?.getString("fromPage") ?: "Home"
-                callBackToPage(state)*/
             }
         }
     }
 
     override fun onShopItemClicked(shopItems: NewModel) {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container, ShopDetailFragment.getShopDetailFragment(shopItems))
-            .addToBackStack(null)
-            .commit()
+        navController.navigate(
+            ShopDetailFragmentDirections.actionShopDetailFragmentSelf(shopItems)
+        )
     }
-
-    /*fun callBackToPage(string: String) {
-        when (string) {
-            "Home" -> {
-                requireActivity().supportFragmentManager.beginTransaction()
-                    .add(R.id.fragment_container, HomeFragment()).addToBackStack(null)
-                    .commit()
-            }
-        }
-    }*/
 }

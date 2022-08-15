@@ -1,7 +1,6 @@
 package com.example.test_7.model
 
 import com.example.test_7.R
-import com.example.test_7.fragment.product.ShopTShirtFragment
 
 
 class DummyData {
@@ -379,7 +378,55 @@ class DummyData {
         )
     )
 
-    var shopListTShirt = listOf(
+    val shopListTShitPopular = listOf(
+        NewModel(
+            title = "Unisex Brown Cute Rabbit Pattern Loose T-shirt",
+            price = "$31.00",
+            imageUrl = "https://tinyurl.com/2p9ezkbk"
+        ),
+        NewModel(
+            title = "Long T Shirt",
+            price = "$34.90",
+            imageUrl = "https://tinyurl.com/5n939e2j"
+        ),
+        NewModel(
+            title = "Women's Long Sleeve T-Shirt",
+            price = "$5.99",
+            imageUrl = "https://tinyurl.com/5yc4fhmp"
+        ),
+        NewModel(
+            title = "Women's T Shirt",
+            price = "$22.20",
+            imageUrl = "https://tinyurl.com/4hh98e3p"
+        ),
+        NewModel(
+            title = "T Shirt Hip Hop Long",
+            price = "$21.99",
+            imageUrl = "https://tinyurl.com/3pb5h9du"
+        ),
+        NewModel(
+            title = "Long T Shirt",
+            price = "$15.99",
+            imageUrl = "https://tinyurl.com/bdd3vfnx"
+        ),
+        NewModel(
+            title = "T Shirt Hip Hop Long",
+            price = "$26.00",
+            imageUrl = "https://tinyurl.com/5ymtah5c"
+        ),
+        NewModel(
+            title = "Men's T Shirt",
+            price = "$20.00",
+            imageUrl = "https://tinyurl.com/5n8h7y43"
+        ),
+        NewModel(
+            title = "Men's T Shirt",
+            price = "$19.99",
+            imageUrl = "https://tinyurl.com/mpems8hc"
+        ),
+    )
+
+    val shopListTShirt = listOf(
         NewModel(
             title = "Unisex Brown Cute Rabbit Pattern Loose T-shirt",
             price = "$31.00",
@@ -409,7 +456,8 @@ class DummyData {
             title = "Black T-Shirt",
             price = "$19.99",
             imageUrl = "https://tinyurl.com/4armwh8d"
-        ), NewModel(
+        ),
+        NewModel(
             title = "Black T Shirt",
             price = "$45.00",
             imageUrl = "https://tinyurl.com/t2eh6xvc"
@@ -420,14 +468,10 @@ class DummyData {
             imageUrl = "https://tinyurl.com/4bnt7jzt"
         ),
         NewModel(
-
             title = "Casual Tekst T Shirt",
             price = "$15,99",
             imageUrl = "https://tinyurl.com/2p8e2e74"
-        )
-    )
-
-    var shopListTShirt2 = listOf(
+        ),
         NewModel(
             title = "Long T Shirt",
             price = "$34.90",
@@ -475,7 +519,55 @@ class DummyData {
         )
     )
 
-    var shopListDress = listOf(
+    val shopListDressPopular = listOf(
+        NewModel(
+            title = "Stradivarius mesh mini dress in chocolate-Brown",
+            price = "$19.00",
+            imageUrl = "https://tinyurl.com/27zf5rb6"
+        ),
+        NewModel(
+            title = "GRACE KARIN Boatneck Sleeveless Vintage Tea Dress with Belt",
+            price = "$37.99",
+            imageUrl = "https://tinyurl.com/2p8kerwn"
+        ),
+        NewModel(
+            title = "Stolen Moments Dusty Pink Lace-Up Lace Maxi Dress",
+            price = "$80.00",
+            imageUrl = "https://tinyurl.com/2p8sk7w5"
+        ),
+        NewModel(
+            title = "Women‘s A Line Dress Midi Dress",
+            price = "$55.25",
+            imageUrl = "https://tinyurl.com/27wk5txk"
+        ),
+        NewModel(
+            title = "Astr The Label Gaia Floral Midi Dress Dark Teal-Gold Floral / M",
+            price = "$98.00",
+            imageUrl = "https://tinyurl.com/2p844rsu"
+        ),
+        NewModel(
+            title = "Endless - Amalfi Maxi Dress",
+            price = "$44.00",
+            imageUrl = "https://tinyurl.com/yvmvhyx2"
+        ),
+        NewModel(
+            title = "White dress",
+            price = "$50.00",
+            imageUrl = "https://tinyurl.com/54hr8h92"
+        ),
+        NewModel(
+            title = "ASOS Design Pleated Layered Tiered Midi Dress in Navy Floral Print with Lace Trim",
+            price = "$85.00",
+            imageUrl = "https://tinyurl.com/3wz78nxm"
+        ),
+        NewModel(
+            title = "Windsor Wrapped in Stylish Satin Mini Dress in Sage",
+            price = "$36.87",
+            imageUrl = "https://tinyurl.com/39xwe8pn"
+        ),
+    )
+
+    val shopListDress = listOf(
         NewModel(
             title = "Stradivarius mesh mini dress in chocolate-Brown",
             price = "$19.00",
@@ -520,10 +612,7 @@ class DummyData {
             title = "Lady Black Tie Promenade Maxi Dress - Black",
             price = "$74.00",
             imageUrl = "https://tinyurl.com/mr46td65"
-        )
-    )
-
-    var shopListDress2 = listOf(
+        ),
         NewModel(
             title = "GRACE KARIN Boatneck Sleeveless Vintage Tea Dress with Belt",
             price = "$37.99",
@@ -551,9 +640,9 @@ class DummyData {
 
         ),
         NewModel(
-            title = "Pop-Over Shirt Dress",
-            price = "$99.00",
-            imageUrl = "https://tinyurl.com/mw9r8uz3"
+            title = "Embroidered Cotton Tier Cover-Up Dress",
+            price = "$138.00",
+            imageUrl = "https://tinyurl.com/y5hcjkfw"
         ),
         NewModel(
             title = "Shirt Dress (With Belt)",
@@ -570,6 +659,54 @@ class DummyData {
             price = "$122.00",
             imageUrl = "https://tinyurl.com/mwsupfcr"
         )
+    )
+
+    val shopListPantsPopular = listOf(
+        NewModel(
+            title = "Revolution Pants",
+            price = "$49.00",
+            imageUrl = "https://tinyurl.com/4afx3rhd"
+        ),
+        NewModel(
+            title = "Solution High Waist Ankle Skinny Pants",
+            price = "$68.00",
+            imageUrl = "https://tinyurl.com/2rzpr4af"
+        ),
+        NewModel(
+            title = "Linen Joggers",
+            price = "$32.45",
+            imageUrl = "https://tinyurl.com/2enzvcsa"
+        ),
+        NewModel(
+            title = "Wide Leg Pull-On Pants",
+            price = "$29.50",
+            imageUrl = "https://tinyurl.com/2p95j5vc"
+        ),
+        NewModel(
+            title = "Tempest Pants",
+            price = "$49.95",
+            imageUrl = "https://tinyurl.com/279mu8tp"
+        ),
+        NewModel(
+            title = "Block Gargo Pants",
+            price = "$59.95",
+            imageUrl = "https://tinyurl.com/3se5nppp"
+        ),
+        NewModel(
+            title = "Cobra Pants",
+            price = "$59.95",
+            imageUrl = "https://tinyurl.com/29s3tmh5"
+        ),
+        NewModel(
+            title = "Ripped High Waist Mom Jeans",
+            price = "$78.00",
+            imageUrl = "https://tinyurl.com/v83va5rh"
+        ),
+        NewModel(
+            title = "Memento Pants",
+            price = "$49.95",
+            imageUrl = "https://tinyurl.com/yckjndc9"
+        ),
     )
 
     val shopListPants = listOf(
@@ -617,10 +754,7 @@ class DummyData {
             title = "Ripped Nonstretch Wide Leg Jeans",
             price = "$49.00",
             imageUrl = "https://tinyurl.com/3dx6bnbz"
-        )
-    )
-
-    val shopListPants2 = listOf(
+        ),
         NewModel(
             title = "Solution High Waist Ankle Skinny Pants",
             price = "$68.00",
@@ -668,103 +802,55 @@ class DummyData {
         )
     )
 
-    val shopListShoes = listOf(
+    val shopListCoatPopular = listOf(
         NewModel(
-            title = "Oversize Sneaker",
-            price = "$590.00",
-            imageUrl = "https://tinyurl.com/25cvvnpn"
+            title = "Classic coat",
+            price = "$59.95",
+            imageUrl = "https://tinyurl.com/586w458m"
         ),
         NewModel(
-            title = "Bananatic Platform Mule Sneaker with Bow",
-            price = "$96.00",
-            imageUrl = "https://tinyurl.com/yztxe2d2"
+            title = "Tailored Double Breasted Coat",
+            price = "$299.00",
+            imageUrl = "https://tinyurl.com/2sbnkuex"
         ),
         NewModel(
-            title = "Color Matching Mesh Pu Shoes",
-            price = "$79.95",
-            imageUrl = "https://tinyurl.com/yahnzv9w"
+            title = "Visions Winter Parka",
+            price = "$119.95",
+            imageUrl = "https://tinyurl.com/3w8mbh3x"
         ),
         NewModel(
-            title = "liff Bow d'Orsay Pump",
-            price = "$328.00",
-            imageUrl = "https://tinyurl.com/2p932wm9"
+            title = "Mix Media Puffer Hooded Coat",
+            price = "$240.00",
+            imageUrl = "https://tinyurl.com/msxcb5yt"
         ),
         NewModel(
-            title = "Cher Crystal Embellished Pump",
-            price = "$235.00",
-            imageUrl = "https://tinyurl.com/48rypm95"
+            title = "Functional Wind Hoodded Jacket",
+            price = "$84.95",
+            imageUrl = "https://tinyurl.com/2cc2mhva"
         ),
         NewModel(
-            title = "Air Max 90 SE Sneaker",
-            price = "$140.00",
-            imageUrl = "https://tinyurl.com/8xwznexs"
+            title = "Aventon Jacket",
+            price = "$94.95",
+            imageUrl = "https://tinyurl.com/2t5mrw8x"
         ),
         NewModel(
-            title = "Cloudfeel Espadrille Wedge Sandal",
-            price = "$96.00",
-            imageUrl = "https://tinyurl.com/55d4284z"
+            title = "Visions Winter Parka",
+            price = "$119.95",
+            imageUrl = "https://tinyurl.com/3w8mbh3x"
         ),
         NewModel(
-            title = "Genuine Shearling Slipper",
-            price = "$100.00",
-            imageUrl = "https://tinyurl.com/2p9vytvn"
+            title = "Chief Demin Coat",
+            price = "$39.90",
+            imageUrl = "https://tinyurl.com/498d4h35"
         ),
         NewModel(
-            title = "Fluff Yeah Genuine Shearling Slingback Sandal",
-            price = "$65.45",
-            imageUrl = "https://tinyurl.com/3349akwa"
+            title = "Dolman Sleeve Quilted Jacket",
+            price = "$198.00",
+            imageUrl = "https://tinyurl.com/2y7kbha9"
         )
     )
 
-    val shopListShoes2 = listOf(
-        NewModel(
-            title = "Clifton 8 Running Shoe",
-            price = "$140.00",
-            imageUrl = "https://tinyurl.com/2scmnhdt"
-        ),
-        NewModel(
-            title = "Georgia Square Toe Ballet Flat",
-            price = "$166.16",
-            imageUrl = "https://tinyurl.com/5d6nnkrj"
-        ),
-        NewModel(
-            title = "Rincon 3 Running Shoe",
-            price = "$125.00",
-            imageUrl = "https://tinyurl.com/2c67mu2j"
-        ),
-        NewModel(
-            title = "Ethyl Low Top Sneaker",
-            price = "$100.00",
-            imageUrl = "https://tinyurl.com/5yh4yfn6"
-        ),
-        NewModel(
-            title = "Waylyn Platform Sneaker",
-            price = "$109.95",
-            imageUrl = "https://tinyurl.com/yc8hfmu9"
-        ),
-        NewModel(
-            title = "Ariane Platform Slide Sandal",
-            price = "$79.96",
-            imageUrl = "https://tinyurl.com/bdy5rvcn"
-        ),
-        NewModel(
-            title = "Clifton 8 Running Shoe",
-            price = "$140.00",
-            imageUrl = "https://tinyurl.com/3yjezmbd"
-        ),
-        NewModel(
-            title = "Hazel Pointed Toe Pump",
-            price = "$90.98",
-            imageUrl = "https://tinyurl.com/ykbxfbkf"
-        ),
-        NewModel(
-            title = "Cloud 5 Running Shoe",
-            price = "$139.99",
-            imageUrl = "https://tinyurl.com/az5r2ke3"
-        )
-    )
-
-    val shopListCoats = listOf(
+    val shopListCoat = listOf(
         NewModel(
             title = "Classic coat",
             price = "$59.95",
@@ -809,10 +895,7 @@ class DummyData {
             title = "Marjon Plaid Shirt Jacket",
             price = "$98.00",
             imageUrl = "https://tinyurl.com/mukstred"
-        )
-    )
-
-    val shopListCoats2 = listOf(
+        ),
         NewModel(
             title = "Slate Kimono",
             price = "$29.90",
@@ -857,6 +940,147 @@ class DummyData {
             title = "Double Breasted Coat",
             price = "$179.00",
             imageUrl = "https://tinyurl.com/yc52b2tr"
+        )
+    )
+
+    val shopListShoePopular = listOf(
+        NewModel(
+            title = "Oversize Sneaker",
+            price = "$590.00",
+            imageUrl = "https://tinyurl.com/25cvvnpn"
+        ),
+        NewModel(
+            title = "Clifton 8 Running Shoe",
+            price = "$140.00",
+            imageUrl = "https://tinyurl.com/2scmnhdt"
+        ),
+        NewModel(
+            title = "Bananatic Platform Mule Sneaker with Bow",
+            price = "$96.00",
+            imageUrl = "https://tinyurl.com/yztxe2d2"
+        ),
+        NewModel(
+            title = "Georgia Square Toe Ballet Flat",
+            price = "$166.16",
+            imageUrl = "https://tinyurl.com/5d6nnkrj"
+        ),
+        NewModel(
+            title = "Color Matching Mesh Pu Shoes",
+            price = "$79.95",
+            imageUrl = "https://tinyurl.com/yahnzv9w"
+        ),
+        NewModel(
+            title = "Rincon 3 Running Shoe",
+            price = "$125.00",
+            imageUrl = "https://tinyurl.com/2c67mu2j"
+        ),
+        NewModel(
+            title = "liff Bow d'Orsay Pump",
+            price = "$328.00",
+            imageUrl = "https://tinyurl.com/2p932wm9"
+        ),
+        NewModel(
+            title = "Ethyl Low Top Sneaker",
+            price = "$100.00",
+            imageUrl = "https://tinyurl.com/5yh4yfn6"
+        ),
+        NewModel(
+            title = "Cher Crystal Embellished Pump",
+            price = "$235.00",
+            imageUrl = "https://tinyurl.com/48rypm95"
+        )
+    )
+
+    val shopListShoe = listOf(
+        NewModel(
+            title = "Oversize Sneaker",
+            price = "$590.00",
+            imageUrl = "https://tinyurl.com/25cvvnpn"
+        ),
+        NewModel(
+            title = "Bananatic Platform Mule Sneaker with Bow",
+            price = "$96.00",
+            imageUrl = "https://tinyurl.com/yztxe2d2"
+        ),
+        NewModel(
+            title = "Color Matching Mesh Pu Shoes",
+            price = "$79.95",
+            imageUrl = "https://tinyurl.com/yahnzv9w"
+        ),
+        NewModel(
+            title = "liff Bow d'Orsay Pump",
+            price = "$328.00",
+            imageUrl = "https://tinyurl.com/2p932wm9"
+        ),
+        NewModel(
+            title = "Cher Crystal Embellished Pump",
+            price = "$235.00",
+            imageUrl = "https://tinyurl.com/48rypm95"
+        ),
+        NewModel(
+            title = "Air Max 90 SE Sneaker",
+            price = "$140.00",
+            imageUrl = "https://tinyurl.com/8xwznexs"
+        ),
+        NewModel(
+            title = "Cloudfeel Espadrille Wedge Sandal",
+            price = "$96.00",
+            imageUrl = "https://tinyurl.com/55d4284z"
+        ),
+        NewModel(
+            title = "Genuine Shearling Slipper",
+            price = "$100.00",
+            imageUrl = "https://tinyurl.com/2p9vytvn"
+        ),
+        NewModel(
+            title = "Fluff Yeah Genuine Shearling Slingback Sandal",
+            price = "$65.45",
+            imageUrl = "https://tinyurl.com/3349akwa"
+        ),
+        NewModel(
+            title = "Clifton 8 Running Shoe",
+            price = "$140.00",
+            imageUrl = "https://tinyurl.com/2scmnhdt"
+        ),
+        NewModel(
+            title = "Georgia Square Toe Ballet Flat",
+            price = "$166.16",
+            imageUrl = "https://tinyurl.com/5d6nnkrj"
+        ),
+        NewModel(
+            title = "Rincon 3 Running Shoe",
+            price = "$125.00",
+            imageUrl = "https://tinyurl.com/2c67mu2j"
+        ),
+        NewModel(
+            title = "Ethyl Low Top Sneaker",
+            price = "$100.00",
+            imageUrl = "https://tinyurl.com/5yh4yfn6"
+        ),
+        NewModel(
+            title = "Waylyn Platform Sneaker",
+            price = "$109.95",
+            imageUrl = "https://tinyurl.com/yc8hfmu9"
+        ),
+        NewModel(
+            title = "Ariane Platform Slide Sandal",
+            price = "$79.96",
+            imageUrl = "https://tinyurl.com/bdy5rvcn"
+        ),
+        NewModel(
+            title = "Clifton 8 Running Shoe",
+            price = "$140.00",
+            imageUrl = "https://tinyurl.com/3yjezmbd"
+        ),
+        NewModel(
+            title = "Hazel Pointed Toe Pump",
+            price = "$90.98",
+            imageUrl = "https://tinyurl.com/ykbxfbkf"
+        ),
+        NewModel(
+            title = "Cloud 5 Running Shoe",
+            price = "$139.99",
+            imageUrl = "https://tinyurl.com/az5r2ke3"
         )
     )
 }

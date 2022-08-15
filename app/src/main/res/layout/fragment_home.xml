@@ -460,7 +460,7 @@
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/josefinsans_bold"
-                    android:text="T_Shirt"
+                    android:text="T Shirt"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -480,107 +480,18 @@
                     android:orientation="vertical"
                     app:layout_constraintGuide_percent="0.67" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping1"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fragment_home_popular_t_shirt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_t_shirt"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+                    app:spanCount="3"
+                    tools:listitem="@layout/item_shop_list_popular" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_t_shirt_shopping2"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18sp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping2"
-                    app:layout_constraintEnd_toStartOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_t_shirt"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18sp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_t_shirt"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18sp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping4"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_t_shirt_shopping5"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18sp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping5"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping7"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping8"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_t_shirt_shopping_8"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/t_shirt_shopping9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
 
                 <TextView
                     android:id="@+id/tv_fragment_home_t_shirt_see_all"
@@ -595,7 +506,7 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_t_shirt_shopping_8" />
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_popular_t_shirt" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -620,110 +531,17 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_t_shirt_see_all" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping1"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fragment_home_popular_dress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_dress"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_dress_shopping2"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping2"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_dress"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_dress"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping4"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_dress_shopping5"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping5"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping7"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_dress_shopping8"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dress_shopping8"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+                    app:spanCount="3"
+                    tools:listitem="@layout/item_shop_list_popular" />
 
                 <TextView
                     android:id="@+id/tv_fragment_home_dress_see_all"
@@ -738,7 +556,7 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_dress_shopping8" />
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_popular_dress" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -763,110 +581,17 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_dress_see_all" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping1"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fragment_home_popular_pants"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_pants"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_pants_shopping2"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping2"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_pants"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_pants"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping4"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_pants_shopping5"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping5"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping7"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_pants_shopping8"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping8"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pants_shopping9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+                    app:spanCount="3"
+                    tools:listitem="@layout/item_shop_list_popular" />
 
                 <TextView
                     android:id="@+id/tv_fragment_home_pants_see_all"
@@ -881,7 +606,7 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_pants_shopping8" />
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_popular_pants" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -894,125 +619,32 @@
                     app:layout_constraintTop_toTopOf="@id/tv_fragment_home_pants_see_all" />
 
                 <TextView
-                    android:id="@+id/tv_fragment_home_popular_shoes"
+                    android:id="@+id/tv_fragment_home_popular_shoe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/josefinsans_bold"
-                    android:text="Shoes"
+                    android:text="Shoe"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_pants_see_all" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_coat_see_all" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping1"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_shoes"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_shoes_shopping2"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping2"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_shoes"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping3"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fragment_home_popular_shoe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_shoes"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping4"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_shoes_shopping5"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping5"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping7"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_shoes_shopping8"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping8"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/shoe_shopping9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_shoe"
+                    app:spanCount="3"
+                    tools:listitem="@layout/item_shop_list_popular" />
 
                 <TextView
-                    android:id="@+id/tv_fragment_home_shoes_see_all"
+                    android:id="@+id/tv_fragment_home_shoe_see_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -1024,7 +656,7 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_shoes_shopping8" />
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_popular_shoe" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -1032,9 +664,9 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="2.5dp"
                     android:src="@drawable/ic_arrow_right"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_shoes_see_all"
-                    app:layout_constraintStart_toEndOf="@id/tv_fragment_home_shoes_see_all"
-                    app:layout_constraintTop_toTopOf="@id/tv_fragment_home_shoes_see_all" />
+                    app:layout_constraintBottom_toBottomOf="@id/tv_fragment_home_shoe_see_all"
+                    app:layout_constraintStart_toEndOf="@id/tv_fragment_home_shoe_see_all"
+                    app:layout_constraintTop_toTopOf="@id/tv_fragment_home_shoe_see_all" />
 
                 <TextView
                     android:id="@+id/tv_fragment_home_popular_coat"
@@ -1043,116 +675,23 @@
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/josefinsans_bold"
-                    android:text="Coats"
+                    android:text="Coat"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_shoes_see_all" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_pants_see_all" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping1"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fragment_home_popular_coat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_coat"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_coat_shopping2"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping2"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_coat"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/tv_fragment_home_popular_coat"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping4"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_coat_shopping5"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping5"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping2"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping7"
-                    app:layout_constraintEnd_toEndOf="@id/guideline4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/iv_fragment_home_coat_shopping8"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping8"
-                    app:layout_constraintEnd_toEndOf="@id/guideline5"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="18dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/coat_shopping9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline5"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping5"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView3" />
+                    app:spanCount="3"
+                    tools:listitem="@layout/item_shop_list_popular" />
 
                 <TextView
                     android:id="@+id/tv_fragment_home_coat_see_all"
@@ -1167,7 +706,7 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_fragment_home_coat_shopping8" />
+                    app:layout_constraintTop_toBottomOf="@id/rv_fragment_home_popular_coat" />
 
                 <ImageView
                     android:layout_width="wrap_content"

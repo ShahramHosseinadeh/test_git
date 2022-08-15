@@ -8,9 +8,9 @@ import coil.load
 import com.example.test_7.R
 import com.example.test_7.model.NewModel
 import com.example.test_7.ui.listener.ShopListListener
-import kotlinx.android.synthetic.main.item_shop_list.view.*
+import kotlinx.android.synthetic.main.item_shop_list_popular.view.*
 
-class ShopListAdapter(
+class ShopListAdapterProductPopular(
     val listItems: List<NewModel>,
     val listener: ShopListListener,
 ) :
@@ -18,7 +18,8 @@ class ShopListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         var layout =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_shop_list, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_shop_list_popular, parent, false)
         return ShopListViewHolder(layout)
     }
 
@@ -32,20 +33,8 @@ class ShopListAdapter(
 
     inner class ShopListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData(item: NewModel, listener: ShopListListener) {
-            itemView.tv_shop_list_title.text = item.title
-            itemView.tv_shop_list_price.text = item.price
-            itemView.iv_shop_list_cover.load(item.imageUrl)
 
-            var isFavorite = false
-            itemView.iv_shop_list_favorite.setOnClickListener {
-                if (!isFavorite) {
-                    itemView.iv_shop_list_favorite.setImageResource(R.drawable.ic_favorite_full)
-                    isFavorite = true
-                } else {
-                    itemView.iv_shop_list_favorite.setImageResource(R.drawable.ic_favorite)
-                    isFavorite = false
-                }
-            }
+            itemView.iv_item_shop_popular.load(item.imageUrl)
 
             itemView.setOnClickListener {
                 listener.onShopItemClicked(shopItems = item)

@@ -12,8 +12,11 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_fragment_home_to_shopDetailFragmentHome"
+            android:id="@+id/action_fragment_home_to_shopDetailFragment"
             app:destination="@id/shopDetailFragment" />
+        <action
+            android:id="@+id/action_fragment_home_to_shopProductFragment"
+            app:destination="@id/shopProductFragment" />
     </fragment>
 
     <fragment
@@ -23,7 +26,7 @@
         tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_fragment_menu_to_shopDetailProduct"
-            app:destination="@id/shopDetailProduct" />
+            app:destination="@id/shoplProductMenuFragment" />
     </fragment>
 
     <fragment
@@ -47,11 +50,14 @@
         <argument
             android:name="newModel"
             app:argType="com.example.test_7.model.NewModel" />
+        <action
+            android:id="@+id/action_shopDetailFragment_self"
+            app:destination="@id/shopDetailFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/shopDetailProduct"
-        android:name="com.example.test_7.fragment.details.ShopDetailProductFragment"
+        android:id="@+id/shoplProductMenuFragment"
+        android:name="com.example.test_7.fragment.details.ShopProductMenuFragment"
         tools:lable="ShopDetailProduct"
         tools:layout="@layout/fragment_shop_detail_product">
         <action
@@ -62,5 +68,17 @@
             app:argType="com.example.test_7.model.NewModelMenu" />
     </fragment>
 
+    <fragment
+        android:id="@+id/shopProductFragment"
+        android:name="com.example.test_7.fragment.product.ShopProductFragment"
+        android:label="shopProductFragment"
+        tools:layout="@layout/fragment_shop_product">
 
+        <action
+            android:id="@+id/action_shopProductFragment_to_shopDetailFragment"
+            app:destination="@id/shopDetailFragment" />
+        <argument
+            android:name="titleProduct"
+            app:argType="string" />
+    </fragment>
 </navigation>

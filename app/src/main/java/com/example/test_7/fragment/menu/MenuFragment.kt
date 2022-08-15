@@ -7,12 +7,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test_7.R
-import com.example.test_7.fragment.details.ShopDetailProductFragment
 import com.example.test_7.model.DummyData
-import com.example.test_7.model.NewModel
 import com.example.test_7.model.NewModelMenu
 import com.example.test_7.ui.adapter.ShopListAdapterMenu
-import com.example.test_7.ui.listener.ShopListListener
+
 import com.example.test_7.ui.listener.ShopListListenerProduct
 import kotlinx.android.synthetic.main.fragment_menu.*
 

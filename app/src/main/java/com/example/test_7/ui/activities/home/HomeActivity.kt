@@ -23,5 +23,15 @@ open class HomeActivity : AppCompatActivity(R.layout.activity_main_bottom_naviga
         val navController = navHostFragment.navController
         findViewById<BottomNavigationView>(R.id.btm_navigation)
             .setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.shopDetailFragment ||
+                destination.id == R.id.shopProductFragment ||
+                destination.id == R.id.shoplProductMenuFragment
+            )
+                btm_navigation.visibility = View.GONE
+            else
+                btm_navigation.visibility = View.VISIBLE
+        }
     }
 }
