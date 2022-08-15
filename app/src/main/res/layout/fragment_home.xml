@@ -15,7 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.core.widget.NestedScrollView
+        <com.example.test_7.util.SaveScrollNestedScrollViewer
+            android:id="@+id/nsv_fragment_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -720,7 +721,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.core.widget.NestedScrollView>
+        </com.example.test_7.util.SaveScrollNestedScrollViewer>
 
     </FrameLayout>
 

@@ -1,6 +1,7 @@
 package com.example.test_7.fragment.home
 
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -15,11 +16,21 @@ import com.example.test_7.ui.adapter.ShopListAdapterProduct
 import com.example.test_7.ui.adapter.ShopListAdapterProductPopular
 import com.example.test_7.ui.listener.ShopListListener
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.handleCoroutineException
 
 class HomeFragment : Fragment(R.layout.fragment_home), ShopListListener, View.OnClickListener {
     val navController by lazy { findNavController() }
+
+    companion object {
+        var myScrollViewerInstanceState: Parcelable? = null
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        if (myScrollViewerInstanceState != null) {
+            nsv_fragment_home.onRestoreInstanceState(myScrollViewerInstanceState)
+        }
 
         setRecyclerViewData()
 
@@ -29,6 +40,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), ShopListListener, View.On
         tv_fragment_home_shoe_see_all.setOnClickListener(this)
         tv_fragment_home_coat_see_all.setOnClickListener(this)
 
+    }
+
+    override fun onPause() {
+        super.onPause()
+        super.onPause()
+        myScrollViewerInstanceState = nsv_fragment_home.onSaveInstanceState()
     }
 
     private fun setRecyclerViewData() {
@@ -70,6 +87,13 @@ class HomeFragment : Fragment(R.layout.fragment_home), ShopListListener, View.On
         )
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+    }
 
     override fun onClick(view: View?) {
         when (view) {
