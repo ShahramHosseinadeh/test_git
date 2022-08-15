@@ -27,8 +27,6 @@ class ShopDetailProductFragment : Fragment(R.layout.fragment_shop_detail_product
 
         if (shopDetailItemProduct?.title == "Pants") {
             tv_fragment_detail_product_name.text = shopDetailItemProduct?.title
-
-
         }
 
         Log.d("tagX", getShopDetailProductFragment(shopDetailProductFragmentArgs.newModelMenu).toString())

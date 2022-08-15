@@ -19,8 +19,6 @@ class ShopDetailFragment : Fragment(R.layout.fragment_shop_detail_home), OnClick
     ShopListListener {
     //This is for favorite FULL or EMPTY
     var isFavorite: Boolean = false
-
-    //
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -115,7 +113,7 @@ class ShopDetailFragment : Fragment(R.layout.fragment_shop_detail_home), OnClick
         requireActivity().supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, ShopDetailFragment.getShopDetailFragment(shopItems))
             .addToBackStack(null)
-            .commit() 
+            .commit()
     }
 
     /*fun callBackToPage(string: String) {

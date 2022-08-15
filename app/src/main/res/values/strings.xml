@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TEst_7</string>
     <string name="discount_text">with <font color='#defe71'>15%</font> discount</string>
+    <string name="terms_Privacy_Policy">I agree to<font color='#defe71'> Terms of Services &amp; Privacy Policy</font></string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

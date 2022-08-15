@@ -9,6 +9,7 @@ import coil.load
 import com.example.test_7.MainActivity
 import com.example.test_7.R
 import com.example.test_7.ui.activities.home.HomeActivity
+import com.example.test_7.ui.activities.signup_or_login.EnterClientActivity
 import kotlinx.android.synthetic.main.fragment_fifth.*
 
 class FifthFragment : Fragment(R.layout.fragment_fifth) {
@@ -17,9 +18,8 @@ class FifthFragment : Fragment(R.layout.fragment_fifth) {
 
         btn_fragment_fifth_get_started.setOnClickListener{
 
-            startActivity(Intent(this.activity, HomeActivity::class.java))
-            ActivityCompat.finishAffinity(MainActivity());
-
+            startActivity(Intent(this.activity, EnterClientActivity::class.java))
+            /*ActivityCompat.finishAffinity(MainActivity());*/
             this.activity?.finish()
         }
     }

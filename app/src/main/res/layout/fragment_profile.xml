@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/josefinsans_bold"
-            android:text="Shahram Hosseinzadeh"
+            android:text="Jane Dow"
             android:textColor="@color/white"
             android:textSize="26sp"
             app:layout_constraintEnd_toEndOf="parent"

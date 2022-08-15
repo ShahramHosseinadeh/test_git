@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_enter_client"
+    app:startDestination="@id/fragment_enter_client">
+
+    <fragment
+        android:id="@+id/fragment_enter_client"
+        android:name="com.example.test_7.fragment.enter_client.EnterClientFragment"
+        android:label="EnterClient"
+        tools:layout="@layout/fragment_enter_client">
+        <action
+            android:id="@+id/action_fragment_enter_client_to_fragment_sign_up"
+            app:destination="@id/fragment_sign_up" />
+        <action
+            android:id="@+id/action_fragment_enter_client_to_fragment_log_in"
+            app:destination="@id/fragment_log_in" />
+        <action
+            android:id="@+id/action_fragment_enter_client_to_fragment_forget_password"
+            app:destination="@id/fragment_forget_password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_sign_up"
+        android:name="com.example.test_7.fragment.enter_client.SignUpFragment"
+        android:label="SignUp"
+        tools:layout="@layout/fragment_sign_up">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_log_in"
+        android:name="com.example.test_7.fragment.enter_client.LogInFragment"
+        android:label="LogIn"
+        tools:layout="@layout/fragment_log_in">
+
+        <action
+            android:id="@+id/action_fragment_log_in_to_fragment_forget_password"
+            app:destination="@id/fragment_forget_password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_forget_password"
+        android:name="com.example.test_7.fragment.enter_client.ForgetPasswordFragment"
+        android:label="ForgetPassword"
+        tools:layout="@layout/fragment_forget_password">
+
+    </fragment>
+</navigation>
